@@ -156,6 +156,13 @@ section {
   display: flex;
 }
 
+.pfp-pic {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* PROFILE SECCTION */
 #profile {
   display: flex;
@@ -278,6 +285,9 @@ section {
 }
 
 .about-pic {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
   border-radius: 2rem;
 }
 
