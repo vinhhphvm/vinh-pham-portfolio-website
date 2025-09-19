@@ -435,3 +435,39 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* 1) Make widths include padding + border everywhere */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2) Safety: never allow a tiny horizontal overflow */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* 3) Keep sections inside the viewport on all sizes */
+section {
+  margin: 0 clamp(1rem, 4vw, 10rem);
+}
+
+/* 4) Ensure cards never exceed the viewport */
+.details-container {
+  max-width: 100%;
+  overflow: hidden;
+} /* overflow to respect rounded corners */
+
+/* 5) Keep bullets inside the rounded card */
+.details-container ul {
+  list-style-position: inside;
+  padding-left: 0.75rem; /* small indent so they don’t kiss the border */
+  margin: 0;
+}
+
+/* Optional: if you prefer no bullets, uncomment
+.details-container ul { list-style: none; padding-left: 0; }
+.details-container ul li::before { content: "• "; }
+*/
